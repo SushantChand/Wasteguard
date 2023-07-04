@@ -46,6 +46,8 @@ else{
         <img src="sucess.webp" alt="photo" class="img-responsive img-curve">
     </div>
     <div class="pop">
+
+     <br>
    
     <a href="manageadmin.php"><button>OK</button></a>
 </div>
