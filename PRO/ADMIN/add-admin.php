@@ -37,7 +37,7 @@ define('LOCALHOST','localhost');
     <div class="main">
       <div class="wrapper">
             
-         <h1>Add Admin</h1>
+         <h1>ADD Admin</h1>
       </div>
       </div>
       <form action="" method="post">
