@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME PAGE-</title>
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/style1.css">
    
 </head>
 <body>
@@ -28,21 +29,24 @@
     <!-- main section -->
     <div class="main">
     <h1> -----------------------------------Welcome to Admin Panel of Hermanos--------------------------------------------- </h1>
-    <div class="wrapper">
-            
-              <h2>OUR TEAM</h2>
-              <div class ="col-4">
-              
-            <h3><i>Suchak Dahal</i></h3>
-            <h3><i>Sumit Sapkota</i></h3>
-            <h3><i>Sushant Chand</i></h3>
-            <h3><i>Prabhakar khadka</i></h3>
-              </div>
-                
-                <div class="clearfix"></div>
+    <div class="gallery">
+        <div class= "card">
+            <h1>Sumit Sapkota</h1>
 
-             
-            </div>
+        </div>
+        <div class="card">
+            <h1>Prabhakar Khadka</h1>
+
+        </div>
+        <div class="card">
+            <h1>Suchak Dahal</h1>
+
+        </div>
+        <div class="card">
+            <h1>Sushant Chand</h1>
+        </div>
+        
+    </div>
 
     <!-- main section -->
    
