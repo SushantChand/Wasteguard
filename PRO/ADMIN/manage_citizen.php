@@ -62,11 +62,12 @@ define('LOCALHOST','localhost');
                     <th>SN</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Address</th>
                     <th>Actions</th>
                 </tr>
                 
                 <?php
-                session_start();
+                
                  $n = 1;
             $sql = "select * from user";
             $res = mysqli_query($conn, $sql);
@@ -77,17 +78,19 @@ define('LOCALHOST','localhost');
                     while ($rows = mysqli_fetch_assoc($res)) {
                         $Id = $rows['Id'];
                         $name = $rows['name'];
+                        $Address = $rows['Address'];
                         $email = $rows['email'];
                         ?>
                         <tr>
                             <td><?php echo $n; ?></td>
                             <td><?php echo $name; ?></td>
                             <td><?php echo $email; ?></td>
+                            <td><?php echo $Address; ?></td>
+
                             <td>
    
-                            <a href="<?php echo SITE_URL; ?>Admin/updatecitizen.php?id=<?php echo $Id; ?>" class="btn-primary">Update</a>
-                            <a href="<?php echo SITE_URL; ?>Admin/deletecitizen.php?id=<?php echo $Id; ?>" class="btn-primary">Delete</a>
-
+                                <a href="<?php echo SITE_URL;?>Admin/updatecitizen.php?Id=<?php echo $Id;?>"  class="btn-primary">Update</a>
+                                <a href="<?php echo SITE_URL;?>Admin/deletecitizen.php?Id=<?php echo $Id;?>"  class="btn-primary">Delete</a>
                             </td>
                         </tr>
                        

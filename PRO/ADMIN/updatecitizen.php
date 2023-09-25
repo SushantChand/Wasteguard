@@ -26,7 +26,7 @@ define('LOCALHOST','localhost');
         <li><a href="index.php">HOME</a></li>
                 <li><a href="manageadmin.php">ADMIN</a></li>
                 <li><a href="managestaff.php">STAFF DATA</a></li>
-                <li><a href="manage_citizen.php">CITIZEN</a></li>
+                <li><a href="query.php">CITIZEN</a></li>
                 <li><a href="query.php">QUERY</a></li>
                 <li><a href="logout.php">LOG OUT</a></li>
         </ul>
@@ -46,18 +46,22 @@ $res=mysqli_query($conn,$sql);
 ?>
 <div class="main">
     <div class="wrapper">
-        <h1>UPDATE CITIZEN</h1><br>
+        <h1>UPDATE Citizen</h1><br>
         
        
         <form action="" method="POST">
             <table class="tbl-30">
-                <tr>
-                    <td>Name:</td>
-                    <td><input type="text" name="fullname" value=""></td>
+            <tr>
+                    <td>Fullname:</td>
+                    <td><input type="text" name="name" value=""></td>
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td><input type="text" name="username" value=""></td>
+                    <td><input type="email" name="email" value=""></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" name="Address" value=""></td>
                 </tr>
                
                 <tr>
@@ -79,11 +83,13 @@ if(isset($_POST['submit'])){
     $Id=$_POST['Id'];
     $name=$_POST['name'];
     $email=$_POST['email'];
+    $Address=$_POST['Address'];
     
     //create sql query to update admin
-    $sql="UPDATE Admin SET
+    $sql="UPDATE user SET
     name='$name',
-    email='$email'
+    email='$email',
+    Address='$Address'
     WHERE Id='$Id'
     ";
     //EXECUTE QUERY
@@ -96,7 +102,7 @@ if(isset($_POST['submit'])){
 <!-- footer section -->
 <div class="footer">
 <div class="wrapper">
-          <p>Developed by Team Zero
+          <p>Developed by Team Hermanos
 
           </p>
         </div>

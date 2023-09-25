@@ -14,17 +14,17 @@ define('LOCALHOST','localhost');
 //1 get the id of Admin to be deleted
  $Id=$_GET['Id'] ;
 // 2 create sql query to delete Admin
-$sql="DELETE FROM Admin WHERE Id=$Id";
+$sql="DELETE FROM user WHERE Id=$Id";
 // execute the query
 $res=mysqli_query($conn,$sql);
 //heck thw query  executed sucessfully or not
 if($res==TRUE)
 {
-    echo"Admin deleted sucuessfully";
+    echo"Staff deleted sucuessfully";
 }
 else{
 
-    echo"Admin deleted failed";
+    echo"Staff deleted failed";
 
 }
 //3 redirect to query 
@@ -47,7 +47,7 @@ else{
     </div>
     <div class="pop">
    
-    <a href="manage_citizen.php"><button>OK</button></a>
+    <a href="managestaff.php"><button>OK</button></a>
 </div>
 </body>
 </html>
