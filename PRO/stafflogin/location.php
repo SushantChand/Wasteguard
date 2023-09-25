@@ -49,55 +49,37 @@
                 <th>Ending Location</th>
                 <th>Arrival Time</th>
             </tr>
-            <tr>
-                <td>Sunday</td>
-                <td>Location A</td>
-                <td>9:00 AM</td>
-                <td>Location B</td>
-                <td>12:00 PM</td>
-            </tr>
-            <tr>
-                <td>Monday</td>
-                <td>Location B</td>
-                <td>8:30 AM</td>
-                <td>Location C</td>
-                <td>11:30 AM</td>
-            </tr>
-            <tr>
-                <td>Tuesday</td>
-                <td>Location C</td>
-                <td>10:00 AM</td>
-                <td>Location D</td>
-                <td>1:00 PM</td>
-            </tr>
-            <tr>
-                <td>Wednesday</td>
-                <td>Location D</td>
-                <td>9:30 AM</td>
-                <td>Location E</td>
-                <td>12:30 PM</td>
-            </tr>
-            <tr>
-                <td>Thursday</td>
-                <td>Location E</td>
-                <td>7:45 AM</td>
-                <td>Location F</td>
-                <td>10:45 AM</td>
-            </tr>
-            <tr>
-                <td>Friday</td>
-                <td>Location F</td>
-                <td>11:15 AM</td>
-                <td>Location G</td>
-                <td>2:15 PM</td>
-            </tr>
-            <tr>
-                <td>Saturday</td>
-                <td>Location G</td>
-                <td>8:00 AM</td>
-                <td>Location A</td>
-                <td>11:00 AM</td>
-            </tr>
+            <?php
+            // Connect to the database (replace with your database credentials)
+            $host = 'localhost';
+            $username = 'root';
+            $password = '';
+            $database = 'caretaker';
+
+            $mysqli = new mysqli($host, $username, $password, $database);
+
+            if ($mysqli->connect_error) {
+                die("Connection failed: " . $mysqli->connect_error);
+            }
+
+            // Query to retrieve schedule data
+            $query = "SELECT * FROM travel_schedule";
+            $result = $mysqli->query($query);
+
+            // Fetch and display schedule data
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row['day'] . "</td>";
+                echo "<td>" . $row['starting_location'] . "</td>";
+                echo "<td>" . $row['departure_time'] . "</td>";
+                echo "<td>" . $row['ending_location'] . "</td>";
+                echo "<td>" . $row['arrival_time'] . "</td>";
+                echo "</tr>";
+            }
+
+            // Close the database connection
+            $mysqli->close();
+            ?>
         </table>
     </div>
 </body>
