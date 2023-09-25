@@ -161,6 +161,8 @@ body {
 
 
 
+
+
 /* CONTENT */
 #content {
 	position: relative;
@@ -172,6 +174,8 @@ body {
 	width: calc(100% - 60px);
 	left: 60px;
 }
+
+
 
 
 /* NAVBAR */

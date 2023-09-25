@@ -7,13 +7,10 @@ define('LOCALHOST','localhost');
  $conn = mysqli_connect(LOCALHOST,DB_USERNAME,DB_PASSWORD) or die(mysqli_error($conn));
  $db_select = mysqli_select_db($conn,DB_NAME) or die(mysqli_error($conn));
 ?>
-
 <!DOCTYPE html>
 
 <html lang="en">
- 
 <head>
- 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WasteGuard</title>

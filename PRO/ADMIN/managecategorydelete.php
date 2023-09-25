@@ -1,6 +1,7 @@
 
 <?php
 
+
 define('SITE_URL','http://localhost/PRO') ;
 define('LOCALHOST','localhost');
  define('DB_USERNAME','root');

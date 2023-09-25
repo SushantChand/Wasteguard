@@ -27,6 +27,7 @@ define('LOCALHOST','localhost');
             <li><a href="index.php">HOME</a></li>
                 <li><a href="manageadmin.php">ADMIN</a></li>
                 <li><a href="managestaff.php">STAFF DATA</a></li>
+                <li><a href="edit.php">DELIVERY LOCATION</a></li>
                 <li><a href="query.php">Query</a></li>
             </ul>
         </div>
@@ -91,6 +92,7 @@ if (isset($_POST['submit'])) {
 
           </p>
         </div>
+
 
     </div>
     

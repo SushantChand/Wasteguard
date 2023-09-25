@@ -28,6 +28,7 @@ define('LOCALHOST','localhost');
                 <li><a href="manageadmin.php">ADMIN</a></li>
                 <li><a href="managestaff.php">STAFF DATA</a></li>
                 <li><a href="manage_citizen.php">CITIZEN</a></li>
+                <li><a href="edit.php">DELIVERY LOCATION</a></li>
                 <li><a href="query.php">QUERY</a></li>
                 <li><a href="logout.php">LOG OUT</a></li>
             </ul>
