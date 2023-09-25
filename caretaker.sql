@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 22, 2023 at 08:20 AM
+-- Generation Time: Sep 25, 2023 at 11:38 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.1.6
 
@@ -39,7 +39,7 @@ CREATE TABLE `Admin` (
 --
 
 INSERT INTO `Admin` (`Id`, `fullname`, `username`, `password`) VALUES
-(193, 'asf', 'ghj', '1158f5f8d240a731d28068742adea0fd');
+(197, 'ok', 'ok', '444bcb3a3fcf8389296c49467f27e1d6');
 
 -- --------------------------------------------------------
 
@@ -125,8 +125,7 @@ CREATE TABLE `STAFF` (
 --
 
 INSERT INTO `STAFF` (`Id`, `fullname`, `username`, `password`) VALUES
-(13, 'sushant', 'Sushant', '444bcb3a3fcf8389296c49467f27e1d6'),
-(16, 'ok', 'ok', '444bcb3a3fcf8389296c49467f27e1d6');
+(13, 'sushant', 'Sushant', '444bcb3a3fcf8389296c49467f27e1d6');
 
 -- --------------------------------------------------------
 
@@ -147,17 +146,18 @@ CREATE TABLE `staff2` (
 --
 
 CREATE TABLE `user` (
+  `Id` int(255) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) DEFAULT NULL
+  `Address` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`name`, `email`, `password`) VALUES
-('userAdmin', 'chandsushant9@gmail.com', '191ce25c1d169959886c463bd3016089');
+INSERT INTO `user` (`Id`, `name`, `email`, `Address`) VALUES
+(2, 'userAdmin', 'sushant.191546@ncit.edu.np', 'ok');
 
 --
 -- Indexes for dumped tables
@@ -188,6 +188,12 @@ ALTER TABLE `STAFF`
   ADD PRIMARY KEY (`Id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -195,7 +201,7 @@ ALTER TABLE `STAFF`
 -- AUTO_INCREMENT for table `Admin`
 --
 ALTER TABLE `Admin`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=195;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=198;
 
 --
 -- AUTO_INCREMENT for table `ohno`
@@ -213,7 +219,13 @@ ALTER TABLE `query`
 -- AUTO_INCREMENT for table `STAFF`
 --
 ALTER TABLE `STAFF`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
