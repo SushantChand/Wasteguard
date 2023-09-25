@@ -11,8 +11,10 @@ function validateName($name)
 // Function to validate email address format
 function validateEmail($email)
 {
-  return preg_match("/^[a-zA-Z]+@.+\..+$/", $email);
+  // Email should end with "@gmail.com"
+  return preg_match("/@gmail\.com$/", $email);
 }
+
 
 // Function to validate password format
 function validatePassword($password)
